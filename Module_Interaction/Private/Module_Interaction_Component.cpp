@@ -16,9 +16,10 @@ void UAModule_Interaction_Component::TickComponent(float delta, ELevelTick type,
 	Super::TickComponent(delta, type, func);
 }
 //-------------------------------------------------------------------------------------------------------------
-void UAModule_Interaction_Component::Interaction(const AActor* actor)
+void UAModule_Interaction_Component::Interaction(AActor *actor)
 {
 	actor->ActorHasTag("Player");
+	actor->SetActorLocation(FVector(0.0, 0.0, 200.0) );
 	// Get player controller
 
 	// player controller -> SetViewTargetWithBlend
